@@ -1,0 +1,18 @@
+{
+    "name": "codebuild_lab_2_project",
+    "source": {
+        "type": "GITHUB",
+        "location": "https://github.com/uname/repo",
+        "buildspec": "buildspec.yml"
+    },
+    "artifacts": {
+        "type": "NO_ARTIFACTS"
+    },
+    "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "docker.io/magichk/arte-codebuild-github-leak",
+        "computeType": "BUILD_GENERAL1_MEDIUM",
+        "imagePullCredentialsType": "CODEBUILD"
+    }
+
+}
